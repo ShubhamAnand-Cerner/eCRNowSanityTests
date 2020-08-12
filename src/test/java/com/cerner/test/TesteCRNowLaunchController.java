@@ -30,7 +30,7 @@ public class TesteCRNowLaunchController {
 		HttpClientVO clientVO= new HttpClientVO(URL, config, MediaType.APPLICATION_JSON, HttpVerb.GET, new Object());
 		CommonRestServiceCaller svcObj=new  CommonRestServiceCaller();
 		String response=svcObj.invokeService(clientVO).getResponseStr();
-		System.out.println(response);
+		//System.out.println(response);
 		
 		
 		ClassLoader classLoader = getClass().getClassLoader();
@@ -72,7 +72,7 @@ public class TesteCRNowLaunchController {
 		HttpClientVO clientVO2= new HttpClientVO(checkURL, config2, MediaType.APPLICATION_JSON, HttpVerb.GET, new Object());
 		
 		String expectedResponse=svcObj.invokeService(clientVO2).getResponseStr();
-		System.out.println(expectedResponse);
+		//System.out.println(expectedResponse);
 		
 		
 		assertEquals(mapper.readTree(expectedResponse), mapper.readTree(response.getResponseStr()));
